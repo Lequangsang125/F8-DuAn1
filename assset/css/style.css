@@ -32,7 +32,7 @@ a {
 .btn {
     display: inline-block;
     min-width: 98px;
-    border-radius: 8px;
+    border-radius: 12px;
     background: var(--primary-color);
     color: #FFF;
     text-align: center;
@@ -88,6 +88,7 @@ a {
 .navbar .action-btn {
     padding: 13px 16px;
     margin-left: 18px;
+    border-radius: 8px;
 }
 
 /* Hero */
@@ -156,13 +157,136 @@ a {
     /* 125% */
 }
 
-.client .row-desc{
+.client .row-desc {
     margin-top: 23px;
 }
 
-.client .images{
+.client .images {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 96px;
+}
+
+/* ================Guides================ */
+.guides {
+    margin-top: 200px;
+}
+
+.guides .sub-title {
+    position: relative;
+    color: #000339;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+    /* 100% */
+}
+
+.guides .sub-title::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+
+}
+
+.guides .desc {
+    width: 459px;
+    max-width: 100%;
+    color: #5A6473;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.88;
+    margin: 20px auto 0;
+    /* 187.5% */
+}
+
+.list-guide {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.guide-item {
+    margin: 0 70px;
+    text-align: center;
+}
+
+.guide-item .title {
+    margin-top: 26px;
+    color: #3B3C45;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+    /* 110% */
+}
+
+.guide-item .link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0689FF;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.guide-item .arrow {
+    margin-left: 6px;
+}
+
+.guide-cta {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* .guide-cta a {
+    color: #FFF;
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 500;
+} */
+
+/* ================Featured================ */
+.featured {
+    margin-top: 120px;
+}
+
+.featured .sub-title {
+    color: #000339;
+    font-size: 2.1875rem;
+    font-weight: 600;
+}
+
+.featured .row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured .desc {
+    color: #5A6473;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.87;
+}
+
+.featured .link {
+    display: flex;
+    align-items: center;
+    color: #0689FF;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.featured .link .arrow{
+    margin-left: 8px;
 }
