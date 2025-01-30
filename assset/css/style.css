@@ -46,6 +46,13 @@ a {
     opacity: 0.9;
 }
 
+/*--------giúp cho tiêu đề ngắn lại và lược phần thừa-------*/
+.line-clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp,2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 /* ================Header================ */
 .header {
     position: relative;
@@ -307,7 +314,7 @@ a {
 }
 
 .featured .item .thumb {
-    width: 100%;
+    width: 350px;
     height: 227px;
     object-fit: cover;
     border-top-left-radius: 12px;
@@ -318,12 +325,11 @@ a {
     padding: 17px 20px 24px;
 }
 
-.featured .item .title {
+.featured .item .title a{
     color: #000339;
     font-size: 2rem;
     font-weight: 600;
-    line-height: 1;
-    /* 100% */
+    line-height: 1.5;
 }
 
 .featured .item .desc {
@@ -332,6 +338,7 @@ a {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.5;
+    word-break: break-all;
 }
 
 .featured .item .info {
@@ -348,10 +355,10 @@ a {
     letter-spacing: 0.01em;
 }
 
-.featured .item .icon{
+.featured .item .icon {
     margin-left: 23px;
 }
 
-.featured .item .icon:first-child{
+.featured .item .icon:first-child {
     margin-left: 0;
 }
