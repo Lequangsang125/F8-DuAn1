@@ -649,11 +649,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
+    background: #f9f9f9;
 }
 
 .footer .social-link:hover {
     background: #d1d1d1;
-    border-radius: 3px;
+
+}
+
+.footer .social-link + .social-link{
+    margin-left: 16px;
 }
 
 
