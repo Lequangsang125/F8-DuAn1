@@ -12,6 +12,11 @@ html {
     /* chuyển chữ mặc định 16px thành 10px */
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
@@ -61,16 +66,27 @@ a {
 }
 
 /* ================Header================ */
-.header {
+.fixed-header {
+    background: #E6F0FF;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     position: relative;
     background: #E6F0FF;
-    height: 100vh;
+    height: calc(100vh - 100px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -105,12 +121,7 @@ a {
     border-radius: 8px;
 }
 
-/* Hero */
-.hero {
-    margin-top: 130px;
-}
-
-.hero .sub-title {
+.hero-wrap .sub-title {
     color: #687690;
     font-size: 1.8rem;
     font-style: normal;
@@ -119,7 +130,7 @@ a {
     letter-spacing: 0.01em;
 }
 
-.hero .title {
+.hero-wrap .title {
     color: #000336;
     font-size: 6.3rem;
     font-style: normal;
@@ -129,11 +140,11 @@ a {
     margin-top: 8px;
 }
 
-.hero .info {
+.hero-wrap .info {
     width: 51%;
 }
 
-.hero .desc {
+.hero-wrap .desc {
     color: #5A6473;
     font-size: 1.8rem;
     font-weight: 400;
@@ -183,18 +194,19 @@ a {
     margin-top: 70px;
 }
 
-.client .images a{
+.client .images a {
     display: flex;
     align-items: center;
-    padding:0 32px;
+    padding: 0 32px;
     height: 91px;
 
     border-radius: 12px;
 }
 
-.client .images a:hover{
+.client .images a:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 /* ================Guides================ */
 .guides {
     margin-top: 40px;
@@ -658,7 +670,7 @@ a {
 
 }
 
-.footer .social-link + .social-link{
+.footer .social-link+.social-link {
     margin-left: 16px;
 }
 
