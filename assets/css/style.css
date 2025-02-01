@@ -61,7 +61,17 @@ a {
 }
 
 /* ================Header================ */
+.fixed-header {
+    background: #E6F0FF;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
 .header {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background: #E6F0FF;
     height: 100vh;
@@ -70,7 +80,7 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -183,18 +193,19 @@ a {
     margin-top: 70px;
 }
 
-.client .images a{
+.client .images a {
     display: flex;
     align-items: center;
-    padding:0 32px;
+    padding: 0 32px;
     height: 91px;
 
     border-radius: 12px;
 }
 
-.client .images a:hover{
+.client .images a:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 /* ================Guides================ */
 .guides {
     margin-top: 40px;
@@ -658,7 +669,7 @@ a {
 
 }
 
-.footer .social-link + .social-link{
+.footer .social-link+.social-link {
     margin-left: 16px;
 }
 
