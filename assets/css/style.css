@@ -334,7 +334,8 @@ a {
 }
 
 .featured .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 70px;
     gap: 30px;
 }
@@ -568,7 +569,7 @@ a {
 }
 
 .subscription .info {
-    margin: 0 80px;
+    padding: 0 80px;
     width: 671px;
     max-width: 100%;
 }
@@ -608,6 +609,7 @@ a {
     right: 221px;
 }
 
+/* =======================footer====================== */
 .footer {
     margin-top: 50px;
     padding: 50px 0 58px;
@@ -619,7 +621,7 @@ a {
 }
 
 .footer .row-top {
-    gap: 185px;
+    column-gap: 185px;
 }
 
 .footer .heading {

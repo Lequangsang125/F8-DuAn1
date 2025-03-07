@@ -32,36 +32,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
+    <!-- PC header  -->
     <header class="fixed-header">
         <div class="nav">
             <div class="content">
                 <!-- Navbar -->
                 <nav class="navbar">
+                    <!-- tablet mobile menu  -->
+                     <label for="menu-checkbox" class="toggle-menu">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                     </label>
                     <!-- Logo -->
-                    <a href="#"> <img src="./assets/img/logo.svg" alt="Besnik."></a>
+                    <a class="logo" href="#"> <img src="./assets/img/logo.svg" alt="Besnik."></a>
                     <!-- Navigation -->
-                    <ul>
+                    <ul id="pc-nav">
                         <li><a href="#">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#resources">Resources</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="show-on-mobile separate"><a href="#signin">Signin</a></li>
+                        <li class="show-on-mobile"><a href="#signup">Signup</a></li>
                     </ul>
                     <!-- Action -->
                     <div class="actions">
                         <a href="#!" class="action-link">Sign in</a>
                         <a href="#!" class="btn action-btn">Sign up</a>
+                   
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
+    <!-- tablet/mobile header  -->
+    <header class="mobile-header">
+        <input hidden type="checkbox" class="menu-checkbox" name="" id="menu-checkbox">
+        <!-- overlay  -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <!-- menu content  -->
+        <div class="menu-drawer">
+            <a href="#"> 
+                <img src="./assets/img/logo.svg" alt="Besnik.">
+            </a>
+            <ul id="mobile-nav"></ul>
+            <script>
+                const pcNav = document.querySelector('#pc-nav');
+                const mobileNav = document.querySelector('#mobile-nav');
+
+                mobileNav.innerHTML = pcNav.innerHTML
+            </script>
+        </div>
+    </header>
+
     <!-- thẻ main ngữ nghĩa chứa toàn bộ bố cục trang -->
-    <main>
+    <main >
         <!-- Hero -->
         <div class="hero-wrap">
             <div class="content">
@@ -77,6 +106,7 @@
                 <!-- Hero img -->
                 <img src="./assets/img/hero-img.svg" alt="Discover a place you'll love to live." class="hero-img">
             </div>
+
         </div>
 
         <!-- Client -->
@@ -98,7 +128,7 @@
                 <!-- Row2 -->
                 <div class="row row-desc">
                     <p class="desc">More than 45,000+ companies trust besnik</p>
-                    <p class="desc">5 Star Ratings (2k+ Review)</p>
+                    <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                 </div>
                 <!-- Brand -->
                 <div class="images">
@@ -171,7 +201,7 @@
                     <h2 class="sub-title">Featured Properties</h2>
                     <div class="row">
                         <p class="desc">Everything you need to know when you're looking</p>
-                        <a href="#!" class="link">
+                        <a href="#!" class="link ">
                             <span>View All Properties</span>
                             <img src="./assets/img/arrow.svg" alt="" class="arrow">
                         </a>
@@ -242,6 +272,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="view-all show-on-mobile ">
+                    <a href="#!" class="btn">View All Properties</a>
                 </div>
             </div>
         </div>
@@ -338,7 +372,7 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer  id="contact" class="footer" >
         <div class="content">
             <div class="row row-top">
                 <!-- column -->
@@ -410,7 +444,7 @@
                 </div>
             </div>
             <div class="row row-bottom">
-                <img src="./assets/img/logo.svg" alt="besnik." class="logo">
+                <img src="./assets/img/logo.svg" alt="besnik.">
                 <p class="copyright">Copyright 2020.com, All rights reserved.</p>
             </div>
         </div>
